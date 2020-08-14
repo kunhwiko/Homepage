@@ -1,18 +1,86 @@
 body {
-    background-color : #cbebe1;  
+    margin : 0px;
+    text-align: center;
+    font-family: 'Merriweather', serif;
 }
 
 h1 {
-    color : #4b9f9f;
+    margin-top: 0px;
+    padding-top: 100px;
+    margin-bottom: 0px;
+    font-size: 5rem;
+    font-family: 'Sacramento', cursive;
+    color: #66bfbf;
 }
 
-h3 {
-    color : #4b9f9f;
+h2{
+    font-family: 'Montserrat', sans-serif;
+    color: #66BFBF;
 }
 
-hr {
-    border-color : rgb(196, 85, 104);
-    border-style : dotted none none;
-    border-width : 5px;
-    width : 5%;
+h3{
+    font-family: 'Montserrat', sans-serif;
+    color: #11999E;
+}
+
+.container1 {
+    background-color : #E4F9F5;
+}
+
+.title {
+    margin-top: 0px;
+    padding-bottom: 80px;
+    font-size: 1.5rem; 
+}
+
+.cloud1 {
+    position : relative;
+    left : 503px;
+    top : 133px;
+}
+
+.cloud2 {
+    position : relative;
+    left : 77px;
+    top : 15px;
+}
+
+.cloud3 {
+    position : relative;
+    right : 473px;
+    top : 129px;
+}
+
+.coding {
+    position: relative;
+    bottom: 65px;
+}
+
+.java {
+    position: relative;
+    left: 25%;
+    bottom: 65px;
+}
+
+.python {
+    position: relative;
+    right : 25%;
+    bottom: 65px;
+}
+
+.city {
+    position: relative;
+    right: 40px;
+    bottom: -33px;
+}
+
+.city2 {
+    position: relative;
+    right: 15px;
+}
+
+.city3 {
+    position: relative;
+    bottom: 4px;
+    left: 35px;
 }
