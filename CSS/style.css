@@ -1,5 +1,6 @@
 body {
     margin : 0px;
+    padding-bottom: 0px;
     text-align: center;
     font-family: 'Merriweather', serif;
 }
@@ -39,12 +40,23 @@ hr {
     width : 15%;
 }
 
+a {
+    font-family: 'Montserrat', sans-serif;
+    color: #11999E;
+    text-decoration: none;
+}
+
 .container1 {
     background-color : #E4F9F5;
 }
 
 .container3 {
     background-color : #E4F9F5;
+}
+
+.reference {
+    height: 50px;
+    background-color : #66bfbf;
 }
 
 .box {
@@ -54,6 +66,10 @@ hr {
 .box2 {
     width: 5%;
     display: inline-block;
+}
+
+.box3 {
+    height: 60px;
 }
 
 .title {
@@ -125,13 +141,13 @@ hr {
     margin-right: 50px;
 }
 
-.Skill-1 {
-    width: 33%;
+.Skill-1, .Site1 {
+    width: 32%;
     display: inline-block;
 }
 
-.Skill-2 {
-    width: 33%;
+.Skill-2, .Site2 {
+    width: 32%;
     display: inline-block;
 }
 
@@ -140,8 +156,8 @@ hr {
     top: 12px;
 }
 
-.Skill-3 {
-    width: 33%;
+.Skill-3, .Site3 {
+    width: 32%;
     display: inline-block;
 }
 
@@ -307,4 +323,11 @@ hr {
     .right {
         left: 0%;
     }
+}
+
+.copyright {
+    font-family: 'Montserrat', serif;
+    font-weight: normal;
+    padding-top: 10px;
+    color: #f8f8f8;
 }
