@@ -1,7 +1,6 @@
 * {
     box-sizing: border-box;
 }
-
 html, body {
     margin: 0px;
     padding-bottom: 0px;
@@ -12,6 +11,7 @@ html, body {
 
 nav {
     padding-right: 3%;
+    padding-top: 12%;
 }
 
 nav ul {
@@ -72,42 +72,131 @@ th, td, h4 {
     color: 	 #ffffff;
 }
 
-.container1 {
+.container {
     height: 100%;
     text-align: center;
     background-color: #292828;
 }
 
-.row-container {
-    display: flex;
-    height: calc(100%);
-    width: 100%;
-    text-align: center;
-}
-
-.column-container1 {
-    text-align: left;
+.split-container-content {
     overflow: auto;
     overflow-x: hidden; 
     overflow-y: auto;
     position: relative;
-    height: calc(100%);
-    width: 50%;   
+    width: 50%;
+    height: 100%;
+    display: inline; 
+    float: left;
     -ms-overflow-style: none;  
     scrollbar-width: none; 
 }
-
-.column-container1::-webkit-scrollbar {
+.split-container-content::-webkit-scrollbar {
     display: none;
 }
 
-.column-container2 {
-    text-align: center;
+.split-container-fixed {
     position: -webkit-sticky;
     position: sticky;
-    top: 0;
-    height: calc(100%);
     width: 50%;
+    height: 100%;
+    display: inline; 
+    float: left;  
+}
+
+@media only screen 
+and (max-width : 990px) 
+{
+    .split-container-fixed {
+        width: 100%;
+    }
+
+    .split-container-content {
+        width: 100%;
+    }   
+}
+
+.timeline {
+    width:100%;
+    max-width:800px;
+    background:#fff;
+    padding: 100px 50px;
+    position: relative;
+    box-shadow: 0.5rem 0.5rem 2rem 0 rgba(black, 0.2);
+}
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left:calc(33% + 15px);
+    bottom: 0px;
+    width: 4px;
+    background: #ddd;
+}
+.timeline::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.entry {
+    clear: both;
+    text-align: left;
+    position: relative;
+}
+.entry .title {
+    margin-bottom: .5em;
+    float: left;
+    width: 33%;
+    padding-right: 30px;
+    text-align: right;
+    position: relative;
+}
+.entry .title::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border: 4px solid #F7484E;
+    background-color:#fff;
+    border-radius:100%;
+    top: 15%;
+    right: -8px;
+    z-index: 99;
+}
+.entry .title h3 {
+    margin: 0;
+    font-size: 90%;
+    font-family: 'Lato';
+}
+.entry .title p {
+    margin: 0;
+    font-size: 100%;
+}
+.entry .body {
+    margin: 0 0 3em;
+    float: right;
+    width: 66%;
+    padding-left: 30px;
+}
+.entry .body p {
+    line-height: 1.4em;
+}
+.entry .body p:first-child {
+    margin-top: 0;
+    font-weight: 400;
+}
+.entry .body ul {
+    color:#aaa;
+    padding-left: 0;
+    list-style-type: none;
+}  
+.entry .body li .type1::before {
+    content: "";
+    font-size: 0.5rem;
+}
+.entry .body li .type2::before {
+    content: "-";
+    font-size: 0.5rem;
 }
 
 .mini-row-container, .mini-row-container2, .mini-row-container3, .mini-row-container4, .mini-row-container5, .mini-row-container6, .mini-row-container7 {
@@ -198,20 +287,6 @@ th, td, h4 {
     font-family: 'Montserrat';
 }
 
-.sites-container {
-    padding-top: 40%;
-    text-align: center;
-}
-.info-container {
-    padding-top: 20%;
-    text-align: center;
-}
-.Site1, .Site2, .Site3 {
-    width: 32%;
-    display: inline-block;
-}
-
-
 .button1 {
     color: #fff;
     background: none;
@@ -231,10 +306,24 @@ th, td, h4 {
     color: #F7484E;
 }
 
+.Site {
+    width: 32%;
+    display: inline-block;
+}
+
+.profile-img {
+    position: absolute;
+    margin-top: 4%;
+    margin-left: -75px;
+    max-width: 150px;
+    max-height: 150px;
+    z-index: 1;
+}
+
 .city {
     position: absolute;
     left: 10%;
-    bottom: 18%;
+    bottom: 22%;
 }
 .city2 {
     position: absolute;
@@ -244,133 +333,25 @@ th, td, h4 {
 .city3 {
     position: absolute;
     right: 10%;
-    bottom: 18%;
+    bottom: 22%;
 }
 
-.timeline {
-    width:100%;
-    max-width:800px;
-    background:#fff;
-    padding: 100px 50px;
-    position: relative;
-    box-shadow: 0.5rem 0.5rem 2rem 0 rgba(black, 0.2);
-}
-.timeline::before {
-    content: '';
-    position: absolute;
-    top: 0px;
-    left:calc(33% + 15px);
-    bottom: 0px;
-    width: 4px;
-    background: #ddd;
-}
-.timeline::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.entry {
-    clear: both;
-    text-align: left;
-    position: relative;
-}
-.entry .title {
-    margin-bottom: .5em;
-    float: left;
-    width: 33%;
-    padding-right: 30px;
-    text-align: right;
-    position: relative;
-}
-.entry .title::before {
-    content: '';
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    border: 4px solid #F7484E;
-    background-color:#fff;
-    border-radius:100%;
-    top: 15%;
-    right: -8px;
-    z-index: 99;
-}
-.entry .title h3 {
-    margin: 0;
-    font-size: 90%;
-    font-family: 'Lato';
-}
-.entry .title p {
-    margin: 0;
-    font-size: 100%;
-}
-.entry .body {
-    margin: 0 0 3em;
-    float: right;
-    width: 66%;
-    padding-left: 30px;
-}
-.entry .body p {
-    line-height: 1.4em;
-}
-.entry .body p:first-child {
-    margin-top: 0;
-    font-weight: 400;
-}
-.entry .body ul {
-    color:#aaa;
-    padding-left: 0;
-    list-style-type: none;
-}  
-.entry .body li .type1::before {
-    content: "";
-    font-size: 0.5rem;
-}
-.entry .body li .type2::before {
-    content: "-";
-    font-size: 0.5rem;
-}
-
-.subblock1 {
-    position: relative;
-    width: 40%;
-    display: inline-block;    
-}
-.subblock2 {
-    position: relative;
-    width: 40%;
-    display: inline-block;    
-}
-
-.reference {
-    height: 3%;
-    width: 100%;
-    background-color: #353535;
-}
 .copyright {
-    text-align: center;
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
     font-size: 1rem;
     font-family: "Lato";
     font-weight: normal;
     color: #ffffff;
-    margin-top: 0;
+    padding-top: 10%;
 }
 
-.profile-img {
-    position: absolute;
-    margin-top: 4%;
-    margin-left: -75px;
-    max-width: 150px;
-    max-height: 150px;
+@media only screen 
+and (max-width : 990px) 
+{
+    .profile-img {
+        z-index: -1;
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
