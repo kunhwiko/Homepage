@@ -352,6 +352,6 @@ and (max-width : 990px)
 and (max-width : 990px) 
 {
     .profile-img {
-        z-index: -1;
+        display: none;
     }
 }
