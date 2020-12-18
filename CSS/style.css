@@ -80,7 +80,7 @@ th, td, h4 {
 
 .row-container {
     display: flex;
-    height: 100%;
+    height: calc(100%);
     width: 100%;
     text-align: center;
 }
@@ -91,7 +91,7 @@ th, td, h4 {
     overflow-x: hidden; 
     overflow-y: auto;
     position: relative;
-    height: 100%;
+    height: calc(100%);
     width: 50%;   
     -ms-overflow-style: none;  
     scrollbar-width: none; 
@@ -106,7 +106,7 @@ th, td, h4 {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    height: 100%;
+    height: calc(100%);
     width: 50%;
 }
 
